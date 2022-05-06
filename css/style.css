@@ -1,6 +1,7 @@
 body{
   margin: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 *{
@@ -14,14 +15,19 @@ body{
   color: white;
   margin: 15px;
   border: 0;
-  border-radius: 5px;
+  border-radius: 50px;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
   cursor: pointer;
+  font-size: 25px;
 }
 
 .addTodo{
   width: 100%;  
   height: 50vh;
   transform: translateY(100%);
+  background: white;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -109,4 +115,24 @@ body{
 .addTodo.activeTrans{
   opacity: 1;
   transition: .5s;
+}
+
+.todos{
+  margin: 50px 25px;
+}
+
+.todo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.completed input{
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.todo.completed{
+  background: greenyellow;
 }
