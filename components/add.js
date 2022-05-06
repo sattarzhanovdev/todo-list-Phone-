@@ -1,4 +1,5 @@
 const addTodo = document.querySelector('.addTodo')
+const time = document.querySelector('.time')
 
 addTodo.innerHTML = `
   <div class="close">
@@ -15,7 +16,7 @@ addTodo.innerHTML = `
       <h3>Name</h3> <input type="text" placeholder="Title" class="title" />
     </div>
     <div>
-      <h3>Hour</h3> <input type="time" class="time" /><h3 class="timezone">AM</h3>
+      <h3>Hour</h3> <input type="time" class="time" /><h3 class="timezone">${time.value > 12 ? 'AM' : 'PM'}</h3>
     </div>
     <div>
       <button class="add">Done</button>
